@@ -3,12 +3,13 @@
 <asp:Content ContentPlaceHolderID="main_head" runat="server">
  
     <link href="StyleSheet.css" rel="stylesheet" />
+    
 </asp:Content>
 <asp:Content ContentPlaceHolderID="main_content" runat="server">
         <div id="TableDiv">
         
         
-        <table>
+        <table id="Table1">
             <thead>
                 <tr>
                     <td style="font-size: large; font-weight: bold; font-family: 'Javanese Text';">Kontaktuppgifter</td>
@@ -24,7 +25,7 @@
                     <td>
                         <asp:TextBox ID="textBoxFirstname" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style2">
+                    <td>
                         <asp:TextBox ID="textBoxLastname" runat="server" ></asp:TextBox>
                     </td>
                     <td class="auto-style3">
