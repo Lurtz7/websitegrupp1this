@@ -75,7 +75,40 @@ namespace SQLLibrary
             return result;
         }
 
-        
+        public static List<Customer> ReadCustomers() {
+            List<Customer> readCustomers = new List<Customer>();
+            SqlConnection connection = new SqlConnection(connString);
+            try
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = "select * from Customer";
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = int.Parse(reader["ID"].ToString());
+                    string firstname = reader["Firstname"].ToString();
+                    string lastname = reader["Lastname"].ToString();
+                    string ssn = reader["SSN"].ToString();
+                    string email = reader["Email"].ToString();
+                    string password = reader["Password"].ToString();
+
+                    Customer newCustomer = new Customer(id, firstname, lastname, ssn, email, password);
+                    readCustomers.Add(newCustomer);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return readCustomers;
+        }
 
         public static int CreateAddress(Address address)
         {
