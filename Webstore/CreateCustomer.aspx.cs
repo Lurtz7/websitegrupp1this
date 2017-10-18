@@ -17,16 +17,40 @@ namespace Webstore
 
         protected void btnCreateCust_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer(0, textBoxFirstname.Text, textBoxLastname.Text, textBoxSSN.Text, textBoxEmail.Text, textBoxPassword.Text);
+            LabelInvalidEmailVerif.Visible = false;
+            LabelInvalidPasswordVerif.Visible = false;
 
-            int cid = MySql.CreateContact(customer);
+            if (textBoxPassword.Text.Trim().Length > 0 &&
+                textBoxPassword.Text.CompareTo(textBoxPasswordVerify.Text) == 0 &&
+                textBoxEmail.Text.Trim().Length > 0 &&
+                textBoxEmail.Text.CompareTo(textBoxEmailVerify.Text) == 0 &&
+                textBoxFirstname.Text.Trim().Length > 0 &&
+                textBoxLastname.Text.Trim().Length > 0 &&
+                textBoxSSN.Text.Trim().Length > 0 &&
+                textBoxStreet.Text.Trim().Length > 0 &&
+                textBoxCity.Text.Trim().Length > 0 &&
+                textBoxZIP.Text.Trim().Length > 0 &&
+                textBoxCountry.Text.Trim().Length > 0
+                )
+            {
+                Customer customer = new Customer(0, textBoxFirstname.Text, textBoxLastname.Text, textBoxSSN.Text, textBoxEmail.Text, textBoxPassword.Text);
 
-            Address address = new Address(0, textBoxStreet.Text, textBoxCity.Text, textBoxZIP.Text, textBoxCountry.Text);
+                int cid = MySql.CreateContact(customer);
 
-            int aid = MySql.CreateAddress(address);
+                Address address = new Address(0, textBoxStreet.Text, textBoxCity.Text, textBoxZIP.Text, textBoxCountry.Text);
 
-            int c2a = MySql.C2A(cid, aid);
+                int aid = MySql.CreateAddress(address);
 
+                int c2a = MySql.C2A(cid, aid);
+            }
+            else
+            {
+                if (textBoxEmail.Text.CompareTo(textBoxEmailVerify.Text) != 0)
+                    LabelInvalidEmailVerif.Visible = true;
+                if (textBoxPassword.Text.CompareTo(textBoxPasswordVerify.Text) != 0)
+                    LabelInvalidPasswordVerif.Visible = true;
+
+            }
         }
 
     }

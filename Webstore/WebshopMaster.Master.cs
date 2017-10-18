@@ -13,5 +13,10 @@ namespace Webstore
         {
 
         }
+
+        protected void ButtonMedlem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,86 +1,67 @@
-﻿.tableBody {
-    background-color: black;
-    color: aqua;
-    width: 50%;
-    height:auto;
-    margin: auto;
-    padding: 2px 2px 2px 2px;
-    overflow: hidden;
-}
-h2{
-    margin-left: 2.5%;
-}
-
-.tableRow{
-    width: 100%;
-    position:center;    
-}
-
-.tableCell {
-    float: left;
-    width: 30%;
-    background-color: beige;
-    height: 150px;
-    position: relative;
-    margin: 0% 0% 5% 2.5%;
-}
-
-.buttonShow {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: lightpink;
-    border: none;
-    color: black;
-    padding: 10px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-}
+﻿
 
 #TableDiv {
-    
-    color: navy;
-    background-color: lavender;
+    background-color: white;
+    color: black;
     width: 50%;
-    height: auto;
+    overflow: hidden;
     margin: auto;
-    padding: 2px 2px 2px 2px;
+    float: left;
+    padding-bottom: 2%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+#Table1 {
+    background-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Free-Tileable-High-Quality-Wood-Textures-Patterns-For-3D-Mapping.jpg");
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 
 .TableAdress {
-    width: 75%;
+    background-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Free-Tileable-High-Quality-Wood-Textures-Patterns-For-3D-Mapping.jpg");
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 .TableEmail {
-    width: 75%;
+    background-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Free-Tileable-High-Quality-Wood-Textures-Patterns-For-3D-Mapping.jpg");
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 #textBoxEmail {
-    width: 70%;
+    width: 100%;
 }
 #textBoxEmailVerify {
-    width: 70%;
+    width: 100%;
 }
 
 #textBoxPassword {
-    width: 70%;
+    width: 100%;
     
 }
 
 #textBoxPasswordVerify {
-    width: 70%;
+    width: 100%;
 }
 
 #textBoxStreet {
-    width: 70%;
+    width: 100%;
 }
 
 
 
 #textBoxCity {
-    width: 70%;
+    width:100%;
 }
 
 #textBoxCountry {
-    width: 70%;
+    width: 100%;
 }
