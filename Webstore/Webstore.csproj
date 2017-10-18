@@ -73,6 +73,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="SQL\SQLProcedures.txt" />
     <Content Include="WebshopMaster.Master" />
   </ItemGroup>
   <ItemGroup>

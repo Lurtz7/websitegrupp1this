@@ -1,0 +1,46 @@
+go
+create procedure AddProduct
+@price int,
+@pictureurl varchar(MAX),
+@stocknr int,
+@soldnr int,
+@productdescription varchar(MAX),
+@id int output
+as
+begin
+	insert into Product(Price, PictureUrl, Stocknr, Soldnr, ProductDescription) values(@price, @pictureurl, @stocknr, @soldnr, @productdescription)
+	set @id=SCOPE_IDENTITY()
+end
+
+go
+create procedure ReadProducts
+
+as
+
+begin
+select * from Product
+end
+
+go
+create procedure UpdateProduct
+@idtoupdate int,
+@price int,
+@pictureurl varchar(MAX),
+@stocknr int,
+@soldnr int,
+@productdescription varchar(MAX)
+
+as
+
+begin
+update Product set Price=@price, PictureUrl=@pictureurl, Stocknr=@stocknr, Soldnr=@soldnr, ProductDescription=@productdescription where ID=@idtoupdate
+end
+
+go
+create procedure DeleteProduct
+@idtodelete int
+as
+
+begin
+delete from Product where ID=@idtodelete
+end
