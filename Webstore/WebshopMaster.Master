@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebshopMaster.master.cs" Inherits="Webstore.WebshopMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/JavaScript.js"></script>
+    <link href="MasterStyle.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        #BliMedlem {
+            width: 99px;
+        }
+
+        .auto-style1 {
+            width: 276px;
+            height: 18px;
+        }
+
+        .auto-style2 {
+            width: 100%;
+            height: 49px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            background-color: black;
+            float: left;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="main_head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="left">
+                <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="https://www.staples.com/sbd/cre/marketing/bts-2016/center-assets/20160918/images/office-left.jpg" Width="380px" />
+            </div>
+            <div class="center">
+                <div class="search">
+                    <span class="fa fa-search"></span>
+                    <input placeholder="Sök..." class="auto-style1">
+                </div>
+                <asp:Image ID="Image5" runat="server" ImageUrl="https://i.imgur.com/vnsUlne.png" Height="41px" Width="215px" />
+            </div>
+            <div class="right">
+                <div class="login">
+                    <table>
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="search1">
+                                        <span class="fa1"></span>
+                                        <input placeholder="Användarnamn">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div class="search1">
+                                            <span class="fa1"></span>
+                                            <input placeholder="Lösenord">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="ButtonLogin" runat="server" Height="38px" Text="Logga in" Width="94px" />
+                                    <asp:Button ID="ButtonMedlem" runat="server" Height="38px" Text="Bli medlem" Width="94px" />
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+                <div class="shopping-cart">
+
+                    <span class="fa fa-shopping-cart" id="cart"></span>
+                    <p class="itemsLabel"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="uldiv">
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Pennor</a>
+                    <div class="dropdown-content">
+                        <a href="#">Pennor</a>
+                        <a href="#">Överstrykningspennor</a>
+                        <a href="#">Penslar</a>
+                        <a href="#">Pennvässare</a>
+                        <a href="#">Tejp</a>
+                        <a href="#">Suddgummi</a>
+                        <a href="#">Övrigt</a>
+                    </div>
+                </li>
+                <li class="dropdown2">
+                    <a href="javascript:void(0)" class="dropbtn2">Papper</a>
+                    <div class="dropdown-content2">
+                        <a href="#">A8</a>
+                        <a href="#">A7</a>
+                        <a href="#">A6</a>
+                        <a href="#">A5</a>
+                        <a href="#">A4</a>
+                        <a href="#">A3</a>
+                        <a href="#">A2</a>
+                        <a href="#">A1</a>
+                        <a href="#">Brevpapper</a>
+                    </div>
+                </li>
+                <li class="dropdown3">
+                    <a href="javascript:void(0)" class="dropbtn3">Elektronik</a>
+                    <div class="dropdown-content3">
+                        <a href="#">Grafritare</a>
+                        <a href="#">CAS</a>
+                        <a href="#">Laptop</a>
+                        <a href="#">Tillbehör</a>
+                    </div>
+                </li>
+                <li class="dropdown4">
+                    <a href="javascript:void(0)" class="dropbtn4">Bläck</a>
+                    <div class="dropdown-content4">
+                        <a href="#">Färg</a>
+                        <a href="#">Laser</a>
+                    </div>
+                </li>
+                <li class="dropdown5">
+                    <a href="javascript:void(0)" class="dropbtn5">Möbler</a>
+                    <div class="dropdown-content5">
+                        <a href="#">Kontorsstolar</a>
+                    </div>
+                </li>
+                <li class="dropdown6">
+                    <a href="javascript:void(0)" class="dropbtn6">Memes</a>
+                    <div class="dropdown-content6">
+                        <a href="#">Dank</a>
+                    </div>
+                </li>
+                <li class="dropdown7">
+                    <a href="javascript:void(0)" class="dropbtn7">Övrigt</a>
+                    <div class="dropdown-content7">
+                        <a href="#">Gratulationskort</a>
+                    </div>
+                </li>
+                <li class="dropdown8">
+                    <a href="javascript:void(0)" class="dropbtn8">Kundservice</a>
+                    <div class="dropdown-content8">
+                        <a href="#">Kontakt</a>
+                    </div>
+
+                </li>
+                <li class="inl" style="float: right"><a href="#1">Ej inloggad</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="Content0">
+            <div class="Content1">
+                <asp:Image ID="Image2" runat="server" margin-top="-10px" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_navy_blue.png" Width="31px" />
+            </div>
+            
+            <div class="Content2">
+
+                <asp:ContentPlaceHolder ID="main_content" runat="server">
+                <%--<asp:Image ID="Image3" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_green.png" Width="31px" />--%>
+                  </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="Content3">
+                <asp:Image ID="Image4" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_red.png" Width="31px" />
+            </div>
+        </div>
+
+        <div>
+            
+        </div>
+    </form>
+
+
+</body>
+</html>
+

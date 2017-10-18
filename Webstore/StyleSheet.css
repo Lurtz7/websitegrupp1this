@@ -1,0 +1,86 @@
+﻿.tableBody {
+    background-color: black;
+    color: aqua;
+    width: 50%;
+    height:auto;
+    margin: auto;
+    padding: 2px 2px 2px 2px;
+    overflow: hidden;
+}
+h2{
+    margin-left: 2.5%;
+}
+
+.tableRow{
+    width: 100%;
+    position:center;    
+}
+
+.tableCell {
+    float: left;
+    width: 30%;
+    background-color: beige;
+    height: 150px;
+    position: relative;
+    margin: 0% 0% 5% 2.5%;
+}
+
+.buttonShow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: lightpink;
+    border: none;
+    color: black;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+#TableDiv {
+    
+    color: navy;
+    background-color: lavender;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 2px 2px 2px 2px;
+}
+
+.TableAdress {
+    width: 75%;
+}
+.TableEmail {
+    width: 75%;
+}
+#textBoxEmail {
+    width: 70%;
+}
+#textBoxEmailVerify {
+    width: 70%;
+}
+
+#textBoxPassword {
+    width: 70%;
+    
+}
+
+#textBoxPasswordVerify {
+    width: 70%;
+}
+
+#textBoxStreet {
+    width: 70%;
+}
+
+
+
+#textBoxCity {
+    width: 70%;
+}
+
+#textBoxCountry {
+    width: 70%;
+}
