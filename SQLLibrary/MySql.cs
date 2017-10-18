@@ -75,10 +75,7 @@ namespace SQLLibrary
             return result;
         }
 
-
-
-        //----------------------------------------------------------------
-
+        
 
         public static int CreateAddress(Address address)
         {
@@ -181,7 +178,6 @@ namespace SQLLibrary
             return result;
         }
 
-        //----------------------------------------------------------------
 
 
         public static Customer ValidateLogin(string username, string password)

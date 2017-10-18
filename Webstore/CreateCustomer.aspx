@@ -1,16 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateCustomer.aspx.cs" Inherits="Webstore.CreateCustomer" %>
+﻿<%@ Page MasterPageFile="~/WebshopMaster.Master" Language="C#" AutoEventWireup="true" CodeBehind="CreateCustomer.aspx.cs" Inherits="Webstore.CreateCustomer" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<asp:Content ContentPlaceHolderID="main_head" runat="server">
+ 
     <link href="StyleSheet.css" rel="stylesheet" />
-     
-  
-</head>
-<body>
-    <form id="form1" runat="server">
+</asp:Content>
+<asp:Content ContentPlaceHolderID="main_content" runat="server">
         <div id="TableDiv">
         
         
@@ -51,6 +45,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="textBoxEmailVerify" runat="server"></asp:TextBox>
+                        <asp:Label ID="LabelInvalidEmailVerif" runat="server" Text="Fel e-post" Visible="False"></asp:Label>
                     </td>
                 </tr>
 
@@ -64,6 +59,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="textBoxPasswordVerify" runat="server"></asp:TextBox>
+                        <asp:Label ID="LabelInvalidPasswordVerif" runat="server" Text="Fel lösenord" Visible="False"></asp:Label>
                     </td>
                 </tr>
             </tbody>
@@ -110,6 +106,5 @@
             
         <asp:Button ID="btnCreateCust" runat="server" Height="46px" OnClick="btnCreateCust_Click" Text="Skapa Konto" Width="125px" />
         </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>

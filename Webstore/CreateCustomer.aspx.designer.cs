@@ -13,15 +13,6 @@ namespace Webstore {
     public partial class CreateCustomer {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// textBoxFirstname control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace Webstore {
         protected global::System.Web.UI.WebControls.TextBox textBoxEmailVerify;
         
         /// <summary>
+        /// LabelInvalidEmailVerif control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelInvalidEmailVerif;
+        
+        /// <summary>
         /// textBoxPassword control.
         /// </summary>
         /// <remarks>
@@ -83,6 +83,15 @@ namespace Webstore {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBoxPasswordVerify;
+        
+        /// <summary>
+        /// LabelInvalidPasswordVerif control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelInvalidPasswordVerif;
         
         /// <summary>
         /// textBoxStreet control.
