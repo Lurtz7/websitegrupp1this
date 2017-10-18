@@ -53,5 +53,9 @@ namespace Webstore
             }
         }
 
+        protected void ButtonAvbryt_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/ïndex.aspx");
+        }
     }
 }

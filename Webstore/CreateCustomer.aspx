@@ -106,6 +106,7 @@
         </table>
             
         <asp:Button ID="btnCreateCust" runat="server" Height="46px" OnClick="btnCreateCust_Click" Text="Skapa Konto" Width="125px" />
+            <asp:Button ID="ButtonAvbryt" runat="server" Height="46px" OnClick="ButtonAvbryt_Click" Text="Avbryt" Width="125px" />
         </div>
 
 </asp:Content>
