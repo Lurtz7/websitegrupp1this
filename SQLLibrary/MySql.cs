@@ -283,55 +283,6 @@ namespace SQLLibrary
             return null;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public static Product UpdateProduct(int idToUpdate, int price, string pictureUrl, int stocknr, int soldnr, string productDescription)
         {
 
@@ -383,6 +334,83 @@ namespace SQLLibrary
             }
 
             return null;
+        }
+
+        public static List<Product> ReadProducts()
+        {
+            List<Product> readProducts = new List<Product>();
+            // Läs in alla produkter ur databasen i readProducts
+            SqlConnection connection = new SqlConnection(connString);
+            try
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = "ReadProducts";
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = int.Parse(reader["ID"].ToString());
+                    int price = int.Parse(reader["Price"].ToString());
+                    string pictureUrl = reader["PictureUrl"].ToString();
+                    int stocknr = int.Parse(reader["Stocknr"].ToString());
+                    int soldnr = int.Parse(reader["Soldnr"].ToString());
+                    string productDescription = reader["Soldnr"].ToString();
+                    Product newProduct = new Product(id, price, pictureUrl, stocknr, soldnr, productDescription);
+                    readProducts.Add(newProduct);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            // Returnera readProducts
+            return readProducts;
+        }
+
+        public static List<Product> DeleteProduct(int idToDelete)
+        {
+            List<Product> productsAfterDelete = new List<Product>();
+
+            // Läs in alla produkter i databasen
+            productsAfterDelete = MySql.ReadProducts();
+            // Ta bort produkten ur databasen
+            SqlConnection connection = new SqlConnection(connString);
+            try
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "DeleteProduct";
+                SqlParameter idToDeleteParam = new SqlParameter("@idtodelete", SqlDbType.Int);
+                idToDeleteParam.Value = idToDelete;
+                command.Parameters.Add(idToDeleteParam);
+                int result = command.ExecuteNonQuery();
+                // Om borttagning ur databasen lyckades, ta bort produkten ur listan
+                for (int i = 0; i < productsAfterDelete.Count; i++)
+                {
+                    if (productsAfterDelete[i].ID == idToDelete)
+                    {
+                        productsAfterDelete.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            // Returnera listan
+            return productsAfterDelete;
         }
     }
 }
