@@ -77,7 +77,8 @@
                             <tr>
                                 <td>
                                     <asp:Button ID="ButtonLogin" runat="server" Height="38px" Text="Logga in" Width="94px" />
-                                    <asp:Button ID="ButtonMedlem" runat="server" Height="38px" Text="Bli medlem" Width="94px" />
+                                    <%--<asp:Button ID="ButtonMedlem" runat="server" Height="38px" Text="Bli medlem" Width="94px" OnClick="ButtonMedlem_Click" />--%>
+                                    <a href="CreateCustomer.aspx">Bli medlem</a>
                                 </td>
                             </tr>
                         </tbody>
