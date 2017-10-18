@@ -76,7 +76,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="CheckOut.aspx" />
     <Content Include="Service\productServices.aspx" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="WebshopMaster.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +94,20 @@
     <Content Include="Ïndex.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.aspx.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOut.aspx.designer.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateCustomer.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>CreateCustomer.aspx</DependentUpon>
@@ -119,6 +136,13 @@
     </Compile>
     <Compile Include="Service\productServices.aspx.designer.cs">
       <DependentUpon>productServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebshopMaster.Master.cs">
       <DependentUpon>WebshopMaster.Master</DependentUpon>
