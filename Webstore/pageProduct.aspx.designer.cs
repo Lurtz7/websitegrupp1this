@@ -13,6 +13,24 @@ namespace Webstore {
     public partial class pageProduct {
         
         /// <summary>
+        /// ImageProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageProduct;
+        
+        /// <summary>
+        /// labelProductPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelProductPrice;
+        
+        /// <summary>
         /// textBoxAmount control.
         /// </summary>
         /// <remarks>
@@ -22,6 +40,15 @@ namespace Webstore {
         protected global::System.Web.UI.WebControls.TextBox textBoxAmount;
         
         /// <summary>
+        /// buttonAddProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonAddProduct;
+        
+        /// <summary>
         /// labelProductInfo control.
         /// </summary>
         /// <remarks>
@@ -29,14 +56,5 @@ namespace Webstore {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labelProductInfo;
-        
-        /// <summary>
-        /// labelBack control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelBack;
     }
 }

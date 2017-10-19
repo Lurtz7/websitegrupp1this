@@ -32,8 +32,8 @@
          <input type="radio" name="gender" value="kontant"/> Kontant             
             </div>
             <div class="divButtonAddProduct">            
-            <input type="button" class="buttonProduct" value="Godkänn" />
-            <input type="button" class="buttonProduct" value="Avbryt" />
+            <input type="button" class="buttonProduct"  id="Buy" value="Godkänn" />
+            <input type="button" class="buttonProduct" id="Cancel" value="Avbryt" />
         </div>
         </div>
     </div>

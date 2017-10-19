@@ -12,7 +12,7 @@ namespace SQLLibrary
         public int Price { get; set; }
         public string PictureUrl { get; set; }
         public int Stocknr { get; set; }
-        public int Soldnr { get; set; }
+        public string Soldnr { get; set; }
         public string ProductDescription { get; set; }
 
         // A user should never be created without username/password etc
@@ -21,7 +21,7 @@ namespace SQLLibrary
 
         }
 
-        public Product(int id, int price, string pictureUrl, int stocknr, int soldnr, string productDescription)
+        public Product(int id, int price, string pictureUrl, int stocknr, string soldnr, string productDescription)
         {
             ID = id;
             Price = price;

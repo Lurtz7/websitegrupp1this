@@ -79,7 +79,7 @@
                     </table>
                 </div>
                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="https://d6ce0no7ktiq.cloudfront.net/images/stickers/728.png" Height="15px" Width="30px" /><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="https://d6ce0no7ktiq.cloudfront.net/images/stickers/1164.png" Height="15px" OnClientClick="alert('ahh sluuda, ah du, gå himm me daj')" Width="30px" />
-                <asp:Label ID="numberOfItems" runat="server" Text=0></asp:Label>
+                <%--<asp:Label ID="numberOfItems" runat="server" Text=></asp:Label>--%>
                 <div class="shopping-cart" id="goToCheckOut")>
 
                     <span class="fa fa-shopping-cart" id="cart"></span>
@@ -90,17 +90,10 @@
 
         <div class="uldiv">
             <ul>
+            
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Pennor</a>
-                    <div class="dropdown-content">
-                        <a href="#">Pennor</a>
-                        <a href="#">Överstrykningspennor</a>
-                        <a href="#">Penslar</a>
-                        <a href="#">Pennvässare</a>
-                        <a href="#">Tejp</a>
-                        <a href="#">Suddgummi</a>
-                        <a href="#">Övrigt</a>
-                    </div>
+                    <a href="Ïndex.aspx" class="dropbtn">Hem</a>
+                  
                 </li>
                 <li class="dropdown2">
                     <a href="javascript:void(0)" class="dropbtn2">Papper</a>
@@ -118,11 +111,14 @@
                 </li>
                 <li class="dropdown3">
                     <a href="javascript:void(0)" class="dropbtn3">Elektronik</a>
-                    <div class="dropdown-content3">
-                        <a href="#">Grafritare</a>
-                        <a href="#">CAS</a>
-                        <a href="#">Laptop</a>
-                        <a href="#">Tillbehör</a>
+                  <div class="dropdown-content">
+                        <a href="#">Pennor</a>
+                        <a href="#">Överstrykningspennor</a>
+                        <a href="#">Penslar</a>
+                        <a href="#">Pennvässare</a>
+                        <a href="#">Tejp</a>
+                        <a href="#">Suddgummi</a>
+                        <a href="#">Övrigt</a>
                     </div>
                 </li>
                 <li class="dropdown4">
@@ -165,13 +161,15 @@
                 <li class="dropdown8">
                     <a href="javascript:void(0)" class="dropbtn8">Kundservice</a>
                     <div class="dropdown-content8">
-                        <a href="#">Kontakt</a>
+                        <a href="http://www.twitter.com/kontorsprylarab">Kontakt</a>
                         <a href="#">Butiker</a>
                         <a href="#">Klagomål</a>
                     </div>
 
                 </li>
-                <li class="inl" style="float: right" id="inloggad"><a href="#1">Ej inloggad</a></li>
+                
+                <asp:Label ID="LoggedInLabel" runat="server" Text="Ej inloggad" style="float:right" ForeColor="white" ></asp:Label>
+            
 
 
             </ul>
@@ -188,7 +186,7 @@
             <div class="Content2">
 
                 <asp:ContentPlaceHolder ID="main_content" runat="server">
-                    <%--<asp:Image ID="Image3" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_green.png" Width="31px" />--%>
+                   
                   </asp:ContentPlaceHolder>
             </div>
 

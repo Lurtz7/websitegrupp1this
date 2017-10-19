@@ -11,9 +11,18 @@ namespace Webstore
     public partial class WebshopMaster : System.Web.UI.MasterPage
     {
         List<Customer> customers;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             customers = MySql.ReadCustomers();
+
+            
+            if (Session["User"] != null)
+            {
+                Customer user = (Customer)Session["User"];
+                LoggedInLabel.Text = $"Logged in as {user.Email}";
+            }
+
         }
 
         protected void ButtonMedlem_Click(object sender, EventArgs e)
@@ -23,44 +32,25 @@ namespace Webstore
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-            bool login = false;
-            bool adminLogin = false;
-
-            if (ButtonLogin.Text.CompareTo("Logga in")==0) {
-                string username = String.Format("{0}", Request.Form["email"]);
-                string password = String.Format("{0}", Request.Form["password"]);
-                for (int i = 0; i < customers.Count; i++)
+            if (TextBoxEmail.Text == "admin" && TextBoxPassword.Text == "admin")
+            {
+                Response.Redirect("/AdminPage.aspx");
+            }
+            else
+            {
+                foreach (Customer customer in customers)
                 {
-                    if (username == customers[i].Email && password == customers[i].Password)
+                    if (TextBoxEmail.Text == customer.Email && TextBoxPassword.Text == customer.Password)
                     {
-                        login = true;
+                        Session["User"] = customer;
+                        LoggedInLabel.Text = $"Logged in as {customer.Email}";
                         break;
                     }
                 }
-                if (login)
-                {
-                    if (username == "admin")
-                    {
-                        adminLogin = true;
-                        // Länka till AdminPage.aspx
-                        Response.Redirect("/AdminPage.aspx");
-                    }
-
-                    else
-                    {
-                        // Sätt "inloggad" till användarnamn
-                        ButtonLogin.Text = "Logga ut";
-                    }
-                }
-                ButtonLogin.Text = "Logga ut";
-            }
-            if(ButtonLogin.Text == "Logga ut")
-            {
-                ButtonLogin.Text = "Logga in";
-                //... logga ut
             }
         }
 
+       
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 

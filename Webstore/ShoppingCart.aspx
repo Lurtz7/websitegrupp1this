@@ -8,6 +8,8 @@
     <div>
         <div class="mainContent"><h2>Varukorg</h2>
 
+
+
             <table style="width: 95%;margin-left: 5%;margin-top: 5%;">
                 <tr>
                     <th>Produkt</th>
@@ -15,23 +17,28 @@
                     <th>Antal</th>
                     <th>Pris</th>
                 </tr>
-                <tr>
-                    <td>Penna</td>
-                    <td>100254</td>
-                    <td>5</td>
-                    <td>59,00</td>
-                </tr>
-                <tr>
-                    <td>Penna</td>
-                    <td>100254</td>
-                    <td>5</td>
-                    <td>59,00</td>
-                </tr>
-            </table>
 
-        <div class="divButtonAddProduct">            
-            <input type="button" class="buttonProduct" value="Betala" />
-            <input type="button" class="buttonProduct" value="Ta bort" />
+                
+
+               <%-- <tr>
+                    <td>Penna</td>
+                    <td>100254</td>
+                    <td>5</td>
+                    <td>59,00</td>
+                </tr>
+                <tr>
+                    <td>Penna</td>
+                    <td>100254</td>
+                    <td>5</td>
+                    <td>59,00</td>
+                </tr>--%>
+            </table>
+            <asp:ListBox ID="ListBoxCart" runat="server" ></asp:ListBox>
+        <div class="divButtonAddProduct">   
+
+            <input type="button" class="buttonProduct" id= "Pay" value="Betala" />
+            <asp:Button ID="ClearButton" runat="server" Text="Töm varukorg" OnClick="ClearButton_Click" />
+           <%-- <input type="button" class="buttonProduct" id="Clear"  value="Töm Kundvagn" />--%>
         </div>
     </div>
     </div>

@@ -89,6 +89,7 @@
     <Content Include="Scripts\masterJavaScript.js" />
     <Content Include="Service\productServices.aspx" />
     <Content Include="ShoppingCart.aspx" />
+    <Content Include="WebForm2.aspx" />
     <Content Include="WebshopMaster.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +160,13 @@
     </Compile>
     <Compile Include="ShoppingCart.aspx.designer.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebshopMaster.Master.cs">
       <DependentUpon>WebshopMaster.Master</DependentUpon>

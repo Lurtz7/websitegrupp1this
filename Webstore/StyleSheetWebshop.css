@@ -28,15 +28,17 @@ h2 {
 .tableRow {
     width: 100%;
     position: center;
+    padding-top: 20px;
 }
 
 .tableCell {
     float: left;
     width: 30%;
-    background-color: beige;
-    height: 150px;
+    background-color: white;
+    height: 200px;
     position: relative;
     margin: 0% 0% 2.5% 2.5%;
+   
 }
 
 .buttonShow {
@@ -74,15 +76,19 @@ h2 {
 }
 
 /*pageProduct*/
-.divImageProduct {
+#textBoxAmount {
+
+
+}
+#main_content_ImageProduct {
     height: 250px;
     float: left;
     width: 40%;
     margin: 5% auto 0% 5%;
-    background-color:beige;
+    background-color: beige;
 }
 
-.divProductPrice {
+#divPrice {
     background-color: beige;
     height: 250px;
     width: 40%;
@@ -109,7 +115,7 @@ h2 {
     background-color: palevioletred;
 }
 
-.divInfoProduct {
+#main_content_labelProductInfo {
     height: auto;
     width: 80%;
     background-color: beige;
@@ -205,3 +211,8 @@ h2 {
     
 }
 
+#main_content_ListBoxCart
+{
+    width: 100%;
+    height:auto;
+}

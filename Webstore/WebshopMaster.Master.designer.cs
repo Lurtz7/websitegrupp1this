@@ -103,13 +103,13 @@ namespace Webstore {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
         
         /// <summary>
-        /// numberOfItems control.
+        /// LoggedInLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numberOfItems;
+        protected global::System.Web.UI.WebControls.Label LoggedInLabel;
         
         /// <summary>
         /// Image2 control.

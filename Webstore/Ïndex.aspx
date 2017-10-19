@@ -6,8 +6,8 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="main_content" runat="server">
-    <div class="tableBody">
-        <div class="pin1"><asp:Image ID="Image3" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_green.png" Width="32px" /></div>
+    <div class="tableBody" id="tableDiv">
+       <%-- <div class="pin1"><asp:Image ID="Image3" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_green.png" Width="32px" /></div>
         <div class="pin2"><asp:Image ID="Image1" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_green.png" Width="32px" /></div>
         <br /><br />
         <h2>Pennor</h2>
@@ -36,6 +36,6 @@
                 <input class="buttonShow" type="button" value="Visa" /></div>
             <div class="tableCell">
                 <input class="buttonShow" type="button" value="Visa" /></div>
-        </div>
+        </div>--%>
     </div>
 </asp:Content>

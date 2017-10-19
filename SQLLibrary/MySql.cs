@@ -263,7 +263,7 @@ namespace SQLLibrary
             return customer;
         }
 
-        public static Product CreateProduct(int price, string pictureUrl, int stocknr, int soldnr, string productDescription)
+        public static Product CreateProduct(int price, string pictureUrl, int stocknr, string soldnr, string productDescription)
         {
 
             SqlConnection connection = new SqlConnection(connString);
@@ -284,7 +284,7 @@ namespace SQLLibrary
                 stocknrParam.Value = stocknr;
                 command.Parameters.Add(stocknrParam);
 
-                SqlParameter soldnrParam = new SqlParameter("@soldnr", SqlDbType.Int);
+                SqlParameter soldnrParam = new SqlParameter("@soldnr", SqlDbType.VarChar);
                 soldnrParam.Value = soldnr;
                 command.Parameters.Add(soldnrParam);
 
@@ -334,8 +334,8 @@ namespace SQLLibrary
                     int price = int.Parse(reader["Price"].ToString());
                     string pictureUrl = reader["PictureUrl"].ToString();
                     int stocknr = int.Parse(reader["Stocknr"].ToString());
-                    int soldnr = int.Parse(reader["Soldnr"].ToString());
-                    string productDescription = reader["Soldnr"].ToString();
+                    string soldnr = reader["Soldnr"].ToString();
+                    string productDescription = reader["ProductDescription"].ToString();
                     Product newProduct = new Product(id, price, pictureUrl, stocknr, soldnr, productDescription);
                     readProducts.Add(newProduct);
                 }
@@ -399,7 +399,7 @@ namespace SQLLibrary
         }
 
 
-        public static Product UpdateProduct(int idToUpdate, int price, string pictureUrl, int stocknr, int soldnr, string productDescription)
+        public static Product UpdateProduct(int idToUpdate, int price, string pictureUrl, int stocknr, string soldnr, string productDescription)
         {
 
             SqlConnection connection = new SqlConnection(connString);
@@ -424,7 +424,7 @@ namespace SQLLibrary
                 stocknrParam.Value = stocknr;
                 command.Parameters.Add(stocknrParam);
 
-                SqlParameter soldnrParam = new SqlParameter("@soldnr", SqlDbType.Int);
+                SqlParameter soldnrParam = new SqlParameter("@soldnr", SqlDbType.VarChar);
                 soldnrParam.Value = soldnr;
                 command.Parameters.Add(soldnrParam);
 
