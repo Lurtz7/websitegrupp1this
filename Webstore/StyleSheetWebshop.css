@@ -53,6 +53,10 @@ h2 {
     font-size: 14px;
 }
 
+.buttonShow:hover {
+    background-color: palevioletred;
+}
+
 h2 {
     margin-left: 2.5%;
 }
@@ -99,6 +103,10 @@ h2 {
     font-size: 14px;
     margin: 0% 25% 2% 25%;
     float: right;
+}
+
+#buttonAddProduct:hover {
+    background-color: palevioletred;
 }
 
 .divInfoProduct {
@@ -148,3 +156,52 @@ h2 {
     height: 150px;
     background-size: contain;
 }
+
+/*AdminPage*/
+
+.divAdminAddProduct {
+    width: 15%;
+    padding: 2% 0% 0% 5%;
+    margin: 1%;
+    float: left;
+}
+
+.divAdminTextBox {
+    width: 20%;
+    padding: 2% 40% 0% 0%;
+    margin: 1%;
+    float: left;
+}
+
+.divButtonAddProduct {
+    width: 100%;
+    float: left;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.buttonProduct {
+    background-color: lightpink;
+    width: 20%;
+    border: none;
+    color: black;
+    padding: 18px 18px 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 5% 5% 2% 1%;
+    float: right;
+}
+
+.buttonProduct:hover{
+    background-color: palevioletred;
+}
+
+/*checkout*/
+
+.divPayment{
+    background-color:aquamarine;
+    
+}
+
