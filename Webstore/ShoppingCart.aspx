@@ -30,7 +30,7 @@
             </table>
 
         <div class="divButtonAddProduct">            
-            <input type="button" class="buttonProduct" value="Betala" />
+            <input type="button" class="buttonProduct" id="Pay" value="Betala" />
             <input type="button" class="buttonProduct" value="Ta bort" />
         </div>
     </div>
