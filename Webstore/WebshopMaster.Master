@@ -53,8 +53,7 @@
                             <tr>
                                 <td>
                                     <div class="search1">
-                                        <span class="fa1"></span>
-                                        <input id="email" placeholder="Email-adress"/>
+                                        <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
                                     </div>
                                 </td>
                             </tr>
@@ -62,8 +61,7 @@
                                 <td>
                                     <div>
                                         <div class="search1">
-                                            <span class="fa1"></span>
-                                            <input id="password" type="password" placeholder="Lösenord"/>
+                                            <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
                                         </div>
                                     </div>
                                 </td>

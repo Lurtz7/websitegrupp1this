@@ -56,10 +56,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="textBoxPassword" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="textBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:TextBox ID="textBoxPasswordVerify" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="textBoxPasswordVerify" runat="server" TextMode="Password"></asp:TextBox>
                         <asp:Label ID="LabelInvalidPasswordVerif" runat="server" Text="Fel lösenord" Visible="False"></asp:Label>
                     </td>
                 </tr>
