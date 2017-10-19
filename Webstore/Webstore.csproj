@@ -71,6 +71,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="pageproduct2.aspx" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="pageProduct.aspx.designer.cs">
       <DependentUpon>pageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pageproduct2.aspx.cs">
+      <DependentUpon>pageproduct2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pageproduct2.aspx.designer.cs">
+      <DependentUpon>pageproduct2.aspx</DependentUpon>
     </Compile>
     <Compile Include="productCategory.aspx.cs">
       <DependentUpon>ProductCategory.aspx</DependentUpon>

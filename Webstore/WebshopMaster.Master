@@ -10,8 +10,8 @@
     <script src="Scripts/masterJavaScript.js"></script>
     <link href="MasterStyle.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <style type="text/css">
         #BliMedlem {
             width: 99px;
@@ -20,6 +20,10 @@
         .auto-style1 {
             width: 276px;
             height: 18px;
+        }
+
+        .auto-style2 {
+            height: 68px;
         }
 
         </style>
@@ -76,7 +80,9 @@
 
                     </table>
                 </div>
-                <div class="shopping-cart">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="https://d6ce0no7ktiq.cloudfront.net/images/stickers/728.png" Height="15px" Width="30px" /><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="https://d6ce0no7ktiq.cloudfront.net/images/stickers/1164.png" Height="15px" OnClientClick="alert('ahh sluuda, ah du, gå himm me daj')" Width="30px" />
+                <asp:Label ID="numberOfItems" runat="server" Text=0></asp:Label>
+                <div class="shopping-cart" id="goToCheckOut")>
 
                     <span class="fa fa-shopping-cart" id="cart"></span>
                     <p class="itemsLabel"></p>
@@ -101,7 +107,6 @@
                 <li class="dropdown2">
                     <a href="javascript:void(0)" class="dropbtn2">Papper</a>
                     <div class="dropdown-content2">
-                        <input type="button" id="button1" value="Klicka här!"/>
                         <a href="#">A8</a>
                         <a href="#">A7</a>
                         <a href="#">A6</a>
@@ -126,31 +131,45 @@
                     <a href="javascript:void(0)" class="dropbtn4">Bläck</a>
                     <div class="dropdown-content4">
                         <a href="#">Färg</a>
+                        <a href="#">Svart</a>
                         <a href="#">Laser</a>
+                        <a href="#">Bläckstråleskrivare</a>
+                        <a href="#">Matris</a>
+
                     </div>
                 </li>
                 <li class="dropdown5">
                     <a href="javascript:void(0)" class="dropbtn5">Möbler</a>
                     <div class="dropdown-content5">
                         <a href="#">Kontorsstolar</a>
+                        <a href="#">Bord</a>
+                        <a href="#">Barskåp</a>
                     </div>
                 </li>
                 <li class="dropdown6">
-                    <a href="javascript:void(0)" class="dropbtn6">Memes</a>
+                    <a href="javascript:void(0)" class="dropbtn6">Kolonial</a>
                     <div class="dropdown-content6">
-                        <a href="#">Dank</a>
+                        <a href="#">Kaffe</a>
+                        <a href="#">Diskmedel</a>
+                        <a href="#">Kex</a>
+                        <a href="#">Chäks</a>
                     </div>
                 </li>
                 <li class="dropdown7">
-                    <a href="javascript:void(0)" class="dropbtn7">Övrigt</a>
+                    <a href="javascript:void(0)" class="dropbtn7">Aggremanger</a>
                     <div class="dropdown-content7">
                         <a href="#">Gratulationskort</a>
+                        <a href="#">Presentartiklar</a>
+                        <a href="#">Hemliga lådan</a>
+                        <a href="#">Kylskåsmagneter</a>
                     </div>
                 </li>
                 <li class="dropdown8">
                     <a href="javascript:void(0)" class="dropbtn8">Kundservice</a>
                     <div class="dropdown-content8">
                         <a href="#">Kontakt</a>
+                        <a href="#">Butiker</a>
+                        <a href="#">Klagomål</a>
                     </div>
 
                 </li>
@@ -163,6 +182,9 @@
         <div class="Content0">
             <div class="Content1">
                 <asp:Image ID="Image2" runat="server" margin-top="-10px" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_navy_blue.png" Width="31px" />
+            <div>
+                <asp:Image ID="Image3" runat="server" ImageUrl="http://www.auplod.com/u/palodu9ec5b.png" Height="226px" Width="216px" /></div>
+
             </div>
             
             <div class="Content2">
@@ -174,6 +196,12 @@
 
             <div class="Content3">
                 <asp:Image ID="Image4" runat="server" Height="44px" ImageUrl="http://icon-park.com/imagefiles/pin_red.png" Width="31px" />
+            
+                <div class="auto-style2">
+                    <asp:Image ID="Image6" runat="server" Height="181px" ImageAlign="AbsMiddle" ImageUrl="http://www.auplod.com/u/oadlup9ec48.png" />
+                    <asp:Image ID="Image7" runat="server" Height="213px" ImageUrl="http://www.auplod.com/u/pualdo9ec49.png" Width="201px" />
+                    <asp:Image ID="Image8" runat="server" Height="200px" ImageUrl="http://www.auplod.com/u/aluopd9ec4b.png" Width="180px" />
+                </div>
             </div>
         </div>
 

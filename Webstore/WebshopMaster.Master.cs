@@ -26,7 +26,7 @@ namespace Webstore
             bool login = false;
             bool adminLogin = false;
 
-            if (ButtonLogin.Text == "Logga in") {
+            if (ButtonLogin.Text.CompareTo("Logga in")==0) {
                 string username = String.Format("{0}", Request.Form["email"]);
                 string password = String.Format("{0}", Request.Form["password"]);
                 for (int i = 0; i < customers.Count; i++)
@@ -52,6 +52,7 @@ namespace Webstore
                         ButtonLogin.Text = "Logga ut";
                     }
                 }
+                ButtonLogin.Text = "Logga ut";
             }
             if(ButtonLogin.Text == "Logga ut")
             {

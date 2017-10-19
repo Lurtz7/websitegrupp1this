@@ -615,3 +615,13 @@ div.square {
     background-color: black;
     border-color: black;
 }
+
+#numberOfItems {
+    float: right;
+    font-size: 200%;
+    float: right;
+    top: 20px;
+    padding-right: 20px;
+    color: black;
+    font-weight: bold;
+}

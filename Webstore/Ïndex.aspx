@@ -13,7 +13,7 @@
         <h2>Pennor</h2>
         <div class="tableRow">
             <div class="tableCell"id="pen1">
-                <input class="buttonShow" type="button" value="Visa" /></div>
+                <input class="buttonShow2" type="button" value="Visa" /></div>
             <div class="tableCell"id="pen2">
                 <input class="buttonShow" type="button" value="Visa" /></div>
             <div class="tableCell"id="pen3">
